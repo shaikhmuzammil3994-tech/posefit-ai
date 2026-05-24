@@ -1,0 +1,4 @@
+@router.post("/upload-image")
+async def upload_image(file: UploadFile):
+    # save image
+    return {"image_url": url}
