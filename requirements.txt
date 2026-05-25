@@ -1,0 +1,12 @@
+numpy
+pandas
+opencv-python
+torch
+tensorflow
+fastapi
+uvicorn
+pytest
+flake8
+black
+bandit
+safety
