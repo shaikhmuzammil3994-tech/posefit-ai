@@ -1,38 +1,37 @@
-"use client";
-
-import AutoUpload from "@/components/AutoUpload";
-
-export default function Page() {
+export default function Home() {
   return (
-    <main style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>👕 PoseFit AI</h1>
+    <main style={{
+      display: "flex",
+      height: "100vh",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+      fontFamily: "Arial",
+      background: "#0f172a",
+      color: "white"
+    }}>
+      <h1 style={{ fontSize: "40px", color: "#22c55e" }}>
+        PoseFit AI 🚀
+      </h1>
 
-      <p>Upload photo + fabric → generate outfit preview</p>
-
-      <h3>🧍 User Photo</h3>
-      <AutoUpload />
-
-      <h3 style={{ marginTop: 30 }}>🧵 Fabric Image</h3>
-      <AutoUpload />
+      <p style={{ fontSize: "18px" }}>
+        AI Fitness App is now Live
+      </p>
 
       <button
         style={{
-          marginTop: 30,
-          padding: "12px 24px",
-          borderRadius: "8px",
+          marginTop: "20px",
+          padding: "12px 25px",
+          background: "#22c55e",
           border: "none",
-          background: "black",
-          color: "white",
+          borderRadius: "10px",
           cursor: "pointer",
+          fontSize: "16px"
         }}
+        onClick={() => alert("Welcome to PoseFit AI!")}
       >
-        Generate Outfit
+        Start Workout
       </button>
-
-      <div style={{ marginTop: 40 }}>
-        <h3>👔 Generated Outfit</h3>
-        <p>No output yet</p>
-      </div>
     </main>
   );
-          }
+}
