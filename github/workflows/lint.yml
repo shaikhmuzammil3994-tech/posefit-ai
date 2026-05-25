@@ -1,8 +1,15 @@
+
 name: Lint Code
 
 on:
   push:
+    branches:
+      - main
+      - master
   pull_request:
+    branches:
+      - main
+      - master
 
 jobs:
   lint:
@@ -17,14 +24,14 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Linter
+      - name: Install lint tools
         run: |
           pip install flake8 black
 
-      - name: Run Flake8
+      - name: Run flake8
         run: |
           flake8 . --count --show-source --statistics || true
 
-      - name: Check Formatting
+      - name: Check formatting
         run: |
           black . --check || true
