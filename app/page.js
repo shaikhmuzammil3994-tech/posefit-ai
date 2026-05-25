@@ -14,9 +14,7 @@ export default function Home() {
         PoseFit AI 🚀
       </h1>
 
-      <p style={{ fontSize: "18px" }}>
-        AI Fitness App is now Live
-      </p>
+      <p>Build Fixed Successfully</p>
 
       <button
         style={{
@@ -25,12 +23,11 @@ export default function Home() {
           background: "#22c55e",
           border: "none",
           borderRadius: "10px",
-          cursor: "pointer",
-          fontSize: "16px"
+          cursor: "pointer"
         }}
-        onClick={() => alert("Welcome to PoseFit AI!")}
+        onClick={() => alert("Working!")}
       >
-        Start Workout
+        Start
       </button>
     </main>
   );
