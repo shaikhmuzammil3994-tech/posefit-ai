@@ -2,7 +2,13 @@ name: Security Scan
 
 on:
   push:
+    branches:
+      - main
+      - master
   pull_request:
+    branches:
+      - main
+      - master
 
 jobs:
   security:
@@ -17,7 +23,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Security Tools
+      - name: Install security tools
         run: |
           pip install bandit safety
 
@@ -25,6 +31,6 @@ jobs:
         run: |
           bandit -r . || true
 
-      - name: Dependency Security Check
+      - name: Check dependency vulnerabilities
         run: |
           safety check || true
